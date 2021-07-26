@@ -35,6 +35,11 @@ COLUMNS = [
         "value": lambda card: ", ".join(card.similar_ignored),
         "sort_key": lambda card: card.similar_ignored if card.similar_ignored else [],
     },
+    {
+        "name": "Diagram",
+        "value": lambda card: card.translation,
+        "sort_key": lambda card: card.translation.upper(),
+    },
 ]
 
 
